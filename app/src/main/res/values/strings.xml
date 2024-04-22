@@ -14,7 +14,16 @@
     <string name="nome">Nome</string>
     <string name="email">Email</string>
     <string name="confSenha">Confirmar senha</string>
+
     <string name="saudacao_pg1">Seja bem-vindo</string>
+    <string name="titulo_pg1">Minhas moedas</string>
+    <string name="cotacao">Cotação</string>
+    <string name="sair">Sair</string>
+    <string name="dolar">US$..................25,00</string>
+    <string name="euro">€$.....................25,00</string>
+    <string name="libra">£$.....................25,00</string>
+    <string name="real">R$.....................25,00</string>
+
     <string name="saudacao_pg2">Cotações de hoje</string>
     <string name="saudacao_pg3">Currency Hub</string>
 

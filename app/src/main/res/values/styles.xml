@@ -145,6 +145,16 @@
     <style name="ContainerTitulo_nav">
         <item name="android:layout_width">300dp</item>
         <item name="android:layout_height">90dp</item>
+    </style>
+    <style name="ContainerTitulo_pg1">
+
 
     </style>
+    <style name="container_moedas">
+        <item name="android:layout_width">340dp</item>
+        <item name="android:layout_height">240dp</item>
+        <item name="android:background">@drawable/container_moedas</item>
+
+    </style>
+
 </resources>

@@ -24,7 +24,8 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/header_title"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="ContentDescription,MissingConstraints"
+         />
 
     <TextView
         android:id="@+id/toolbar_title"
