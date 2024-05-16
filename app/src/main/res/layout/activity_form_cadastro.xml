@@ -60,12 +60,14 @@
     <EditText
         android:id="@+id/containerNome"
         style="@style/Container_nome2"
+        android:layout_marginTop="12dp"
+        android:autofillHints=""
         android:hint="@string/nome"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/cadastroComponents"
-        android:autofillHints="" />
+        app:layout_constraintTop_toTopOf="@+id/cadastroComponents" />
+
     <EditText
         android:id="@+id/containerEmail"
         style="@style/Container_email"
@@ -88,12 +90,14 @@
     <EditText
         android:id="@+id/containerSenha"
         style="@style/Container_senha2"
+        android:layout_marginTop="16dp"
         android:hint="@string/senha"
+        android:importantForAutofill="no"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/containerCpf"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toBottomOf="@+id/containerCpf" />
+
     <EditText
         android:id="@+id/containerConfSenha"
         style="@style/Container_senha2"
