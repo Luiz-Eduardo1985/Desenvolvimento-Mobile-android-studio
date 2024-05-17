@@ -3,6 +3,8 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import androidx.annotation.NonNull;
+
 public class CriaBanco extends SQLiteOpenHelper {
 
     private static final String NOME_BANCO = "banco_exemplo.db";
@@ -12,13 +14,9 @@ public class CriaBanco extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onCreate(SQLiteDatabase db) {
-        String sql = "CREATE TABLE contatos ("
-                + "codigo integer primary key autoincrement,"
-                + "nome text,"
-                + "email text)";
-        db.execSQL(sql);
-        sql = "CREATE TABLE usuarios ("
+    public void onCreate(@NonNull SQLiteDatabase db) {
+
+        String sql = "CREATE TABLE usuarios ("
                 + "idUser integer primary key autoincrement,"
                 + "nome text,"
                 + "cpf text,"
@@ -28,7 +26,6 @@ public class CriaBanco extends SQLiteOpenHelper {
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS contatos");
         db.execSQL("DROP TABLE IF EXISTS usuarios");
         onCreate(db);
     }

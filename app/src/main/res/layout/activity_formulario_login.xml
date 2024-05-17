@@ -58,7 +58,7 @@
         app:layout_constraintTop_toBottomOf="@+id/login" />
 
     <EditText
-        android:id="@+id/containerNome"
+        android:id="@+id/containerLogCpf"
         android:hint="@string/cpf"
         style="@style/Container_nome"
         android:inputType="number"
@@ -69,48 +69,40 @@
         android:importantForAutofill="no" />
 
     <EditText
-        android:id="@+id/containerSenha"
+        android:id="@+id/containerLogSenha"
         style="@style/Container_senha"
         android:layout_marginTop="90dp"
         android:hint="@string/senha"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="@+id/loginComponents"
         app:layout_constraintStart_toStartOf="@+id/loginComponents"
-        app:layout_constraintTop_toTopOf="@+id/containerNome"
+        app:layout_constraintTop_toTopOf="@+id/containerLogCpf"
         android:importantForAutofill="no" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button"
+        android:id="@+id/buttonLog"
         style="@style/Button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/containerSenha"
+        app:layout_constraintTop_toBottomOf="@+id/containerLogSenha"
         android:text="@string/entrar"
         android:textColor="@color/white"
         android:textSize="20sp"
         />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_esqueci"
-        style="@style/Button_menor"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        android:text="@string/esq_senha"
-        android:textColor="@color/gray"
-        android:textSize="14sp"
-        />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_cadastrar"
+        android:id="@+id/button_cadastrar_seLog"
         style="@style/Button_cadastrar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_esqueci"
+        app:layout_constraintTop_toBottomOf="@+id/buttonLog"
         android:text="@string/cadastrar"
         android:textColor="@color/gray"
         android:textSize="14sp"
         />
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

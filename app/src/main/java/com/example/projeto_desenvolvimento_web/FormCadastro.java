@@ -30,10 +30,8 @@ public class FormCadastro extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        if (validaDados() == true) {
-            salvarDados();            //gravar dados
-        } else {
-            // erro
+        if (validaDados()) {
+            salvarDados(); //gravar dados
         }
     }
 
