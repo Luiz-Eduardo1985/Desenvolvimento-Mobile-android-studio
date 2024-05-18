@@ -13,33 +13,115 @@
         style="@style/Container_header_nav"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp" />
 
     <ImageView
         android:id="@+id/logo"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginTop="28dp"
         android:src="@drawable/bitcoin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/header_title"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="HardcodedText,MissingConstraints"
+        tools:layout_editor_absoluteX="166dp"
+        tools:layout_editor_absoluteY="28dp"
+        android:contentDescription="logotipo_currency" />
 
     <TextView
         android:id="@+id/toolbar_title"
         style="@style/ContainerTitulo_nav"
-        android:text="@string/saudacao_pg2"
-        android:layout_marginTop="-4dp"
         android:gravity="center"
+        android:text="@string/saudacao_pg2"
         android:textColor="@color/white"
         android:textSize="36sp"
+        tools:layout_editor_absoluteX="56dp"
+        tools:layout_editor_absoluteY="104dp"
+        tools:ignore="MissingConstraints" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_dolar"
+        style="@style/Button_moedas"
+        android:layout_marginTop="10dp"
+        android:text="@string/button_dolar"
+        android:textColor="@color/gray"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_title"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageView
+        android:id="@+id/grafico_dolar"
+        style="@style/graficos_moedas"
+        android:layout_width="200dp"
+        android:layout_height="120dp"
+        android:contentDescription="@string/grafico"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_dolar"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_libra"
+        style="@style/Button_moedas"
+        android:text="@string/button_libra"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/gray"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grafico_dolar"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageView
+        android:id="@+id/grafico_libra"
+        style="@style/graficos_moedas"
+        android:layout_width="200dp"
+        android:layout_height="120dp"
+        android:contentDescription="@string/grafico"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_libra"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_euro"
+        style="@style/Button_moedas"
+        android:layout_marginTop="10dp"
+        android:text="@string/button2_euro"
+        android:textColor="@color/gray"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grafico_libra"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageView
+        android:id="@+id/grafico_euro"
+        style="@style/graficos_moedas"
+        android:layout_width="200dp"
+        android:layout_height="120dp"
+        android:contentDescription="@string/grafico"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_euro"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_voltar"
+        style="@style/Button_moedas"
+        android:layout_marginTop="10dp"
+        android:text="@string/button_voltar"
+        android:textColor="@color/gray"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grafico_euro"
+        tools:ignore="TouchTargetSizeCheck" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

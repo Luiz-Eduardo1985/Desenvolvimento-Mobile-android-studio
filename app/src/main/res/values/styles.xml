@@ -156,5 +156,23 @@
         <item name="android:background">@drawable/container_moedas</item>
 
     </style>
+    <style name="Button_moedas">
+        <item name="android:background">@drawable/button_moedas</item>
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:padding">6dp</item>
+        <item name="android:textAllCaps">false</item>
+
+    </style>
+
+<style name="graficos_moedas">
+    <item name="android:background">@drawable/grafico</item>
+    <item name="android:radius">15dp</item>
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">120dp</item>
+
+</style>
+
 
 </resources>

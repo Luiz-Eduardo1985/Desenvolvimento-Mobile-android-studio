@@ -12,41 +12,34 @@
         style="@style/ContainerTitulo_pg1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
         android:gravity="center"
         android:text="@string/titulo_pg1"
         android:textColor="@color/black"
         android:textSize="36sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header_title" />
+        tools:layout_editor_absoluteX="77dp"
+        tools:layout_editor_absoluteY="236dp"
+        tools:ignore="MissingConstraints" />
 
 
     <View
         android:id="@+id/container_moedas"
         style="@style/container_moedas"
-        android:layout_marginTop="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_pg1"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="324dp" />
 
     <TextView
         android:id="@+id/moedas_dolar"
         style="@style/ContainerTitulo_pg1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:gravity="center"
         android:text="@string/dolar"
         android:textColor="@color/black"
         android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/container_moedas" />
+        tools:layout_editor_absoluteX="70dp"
+        tools:layout_editor_absoluteY="344dp"
+        tools:ignore="MissingConstraints" />
 
 
     <TextView
@@ -58,11 +51,9 @@
         android:text="@string/euro"
         android:textColor="@color/black"
         android:textSize="30sp"
-        android:layout_marginTop="52dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/moedas_dolar"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="69dp"
+        tools:layout_editor_absoluteY="397dp" />
 
     <TextView
         android:id="@+id/moedas_libra"
@@ -73,11 +64,9 @@
         android:text="@string/libra"
         android:textColor="@color/black"
         android:textSize="30sp"
-        android:layout_marginTop="52dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/moedas_euro"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="68dp"
+        tools:layout_editor_absoluteY="449dp" />
 
     <TextView
         android:id="@+id/moedas_real"
@@ -88,11 +77,9 @@
         android:text="@string/real"
         android:textColor="@color/black"
         android:textSize="30sp"
-        android:layout_marginTop="52dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/moedas_libra"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="67dp"
+        tools:layout_editor_absoluteY="501dp" />
 
     <View
         android:id="@+id/header_title"
@@ -108,46 +95,40 @@
         android:layout_height="80dp"
         android:importantForAccessibility="no"
         android:src="@drawable/bitcoin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="166dp"
         tools:layout_editor_absoluteY="28dp" />
 
     <TextView
         android:id="@+id/toolbar_title"
         style="@style/ContainerTitulo_nav"
-        android:layout_marginTop="-4dp"
         android:gravity="center"
         android:text="@string/saudacao_pg1"
         android:textColor="@color/white"
         android:textSize="36sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo" />
+        tools:layout_editor_absoluteX="56dp"
+        tools:layout_editor_absoluteY="104dp"
+        tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/cotacao"
         style="@style/Button_menor"
-        android:layout_marginTop="40dp"
         android:text="@string/cotacao"
         android:textColor="@color/gray"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/container_moedas" />
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="604dp"
+        tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_sair"
         style="@style/Button_menor"
-        android:layout_marginTop="32dp"
         android:text="@string/sair"
         android:textColor="@color/gray"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cotacao" />
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="684dp"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

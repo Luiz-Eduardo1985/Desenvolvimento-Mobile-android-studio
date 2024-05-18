@@ -26,6 +26,11 @@
 
     <string name="saudacao_pg2">Cotações de hoje</string>
     <string name="saudacao_pg3">Currency Hub</string>
+    <string name="grafico">grafico</string>
+    <string name="button_dolar"> Dolar </string>
+    <string name="button_libra"> Libra </string>
+    <string name="button2_euro"> Euro </string>
+    <string name="button_voltar"> Voltar </string>
 
 
 </resources>
