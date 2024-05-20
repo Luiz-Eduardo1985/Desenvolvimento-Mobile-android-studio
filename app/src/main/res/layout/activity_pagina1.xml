@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,21 +13,25 @@
         style="@style/ContainerTitulo_pg1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:gravity="center"
         android:text="@string/titulo_pg1"
         android:textColor="@color/black"
         android:textSize="36sp"
-        tools:layout_editor_absoluteX="77dp"
-        tools:layout_editor_absoluteY="236dp"
+        app:layout_constraintEnd_toEndOf="@+id/header_title"
+        app:layout_constraintStart_toStartOf="@+id/header_title"
+        app:layout_constraintTop_toBottomOf="@+id/header_title"
         tools:ignore="MissingConstraints" />
 
 
     <View
         android:id="@+id/container_moedas"
         style="@style/container_moedas"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="36dp"
-        tools:layout_editor_absoluteY="324dp" />
+        android:layout_marginTop="108dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_title" />
 
     <TextView
         android:id="@+id/moedas_dolar"
@@ -35,12 +40,13 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/dolar"
+        android:layout_marginTop="12dp"
         android:textColor="@color/black"
         android:textSize="30sp"
-        tools:layout_editor_absoluteX="70dp"
-        tools:layout_editor_absoluteY="344dp"
+        app:layout_constraintEnd_toEndOf="@+id/container_moedas"
+        app:layout_constraintStart_toStartOf="@+id/container_moedas"
+        app:layout_constraintTop_toTopOf="@+id/container_moedas"
         tools:ignore="MissingConstraints" />
-
 
     <TextView
         android:id="@+id/moedas_euro"
@@ -48,12 +54,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:layout_marginTop="18dp"
         android:text="@string/euro"
         android:textColor="@color/black"
         android:textSize="30sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="69dp"
-        tools:layout_editor_absoluteY="397dp" />
+        app:layout_constraintEnd_toEndOf="@+id/container_moedas"
+        app:layout_constraintStart_toStartOf="@+id/container_moedas"
+        app:layout_constraintTop_toBottomOf="@+id/moedas_dolar"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/moedas_libra"
@@ -61,12 +69,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:layout_marginTop="18dp"
         android:text="@string/libra"
         android:textColor="@color/black"
         android:textSize="30sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="68dp"
-        tools:layout_editor_absoluteY="449dp" />
+        app:layout_constraintEnd_toEndOf="@+id/container_moedas"
+        app:layout_constraintStart_toStartOf="@+id/container_moedas"
+        app:layout_constraintTop_toBottomOf="@+id/moedas_euro"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/moedas_real"
@@ -74,12 +84,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:layout_marginTop="18dp"
         android:text="@string/real"
         android:textColor="@color/black"
         android:textSize="30sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="67dp"
-        tools:layout_editor_absoluteY="501dp" />
+        app:layout_constraintEnd_toEndOf="@+id/container_moedas"
+        app:layout_constraintStart_toStartOf="@+id/container_moedas"
+        app:layout_constraintTop_toBottomOf="@+id/moedas_libra"
+        tools:ignore="MissingConstraints" />
 
     <View
         android:id="@+id/header_title"
@@ -95,7 +107,7 @@
         android:layout_height="80dp"
         android:importantForAccessibility="no"
         android:src="@drawable/bitcoin"
-        tools:ignore="MissingConstraints"
+        tools:ignore="MissingConstraints,ImageContrastCheck"
         tools:layout_editor_absoluteX="166dp"
         tools:layout_editor_absoluteY="28dp" />
 
@@ -106,18 +118,20 @@
         android:text="@string/saudacao_pg1"
         android:textColor="@color/white"
         android:textSize="36sp"
+        tools:ignore="MissingConstraints,TextSizeCheck,TextContrastCheck"
         tools:layout_editor_absoluteX="56dp"
-        tools:layout_editor_absoluteY="104dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteY="104dp" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/cotacao"
         style="@style/Button_menor"
+        android:layout_marginTop="50dp"
         android:text="@string/cotacao"
         android:textColor="@color/gray"
-        android:textSize="14sp"
-        tools:layout_editor_absoluteX="80dp"
-        tools:layout_editor_absoluteY="604dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container_moedas"
         tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -125,9 +139,11 @@
         style="@style/Button_menor"
         android:text="@string/sair"
         android:textColor="@color/gray"
-        android:textSize="14sp"
-        tools:layout_editor_absoluteX="80dp"
-        tools:layout_editor_absoluteY="684dp"
+        android:layout_marginTop="50dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cotacao"
         tools:ignore="MissingConstraints" />
 
 

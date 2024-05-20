@@ -18,21 +18,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints,ImageContrastCheck" />
 
     <TextView
         android:id="@+id/toolbar_title"
         style="@style/ContainerTitulo"
-        android:text="@string/CurrencyHub"
         android:layout_marginTop="4dp"
         android:gravity="center"
+        android:text="@string/CurrencyHub"
         android:textColor="@color/white"
         android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo"
-        />
+        tools:ignore="TextSizeCheck,TextContrastCheck" />
 
 
     <TextView
@@ -46,13 +46,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar_title"
-        />
+        tools:ignore="TextSizeCheck,TextContrastCheck" />
+
     <View
         android:id="@+id/cadastroComponents"
         style="@style/ContainerComponents"
         android:layout_height="420dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cadastro" />
 

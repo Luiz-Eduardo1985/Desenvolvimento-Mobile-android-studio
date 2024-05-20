@@ -25,9 +25,6 @@
             android:name=".FormCadastro"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
-            android:exported="false" />
-        <activity
             android:name=".formulario_login"
             android:exported="true">
             <intent-filter>
