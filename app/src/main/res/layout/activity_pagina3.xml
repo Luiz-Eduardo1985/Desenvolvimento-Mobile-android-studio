@@ -10,35 +10,98 @@
         android:id="@+id/header_title"
         style="@style/Container_header_nav"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:ignore="MissingConstraints" />
+        android:layout_height="180dp"
+        tools:ignore="MissingConstraints"
+        />
 
     <ImageView
         android:id="@+id/logo"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginTop="28dp"
         android:src="@drawable/bitcoin"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/header_title"
-        tools:ignore="ContentDescription,MissingConstraints"
-         />
+        tools:ignore="ContentDescription,MissingConstraints" />
 
     <TextView
         android:id="@+id/toolbar_title"
         style="@style/ContainerTitulo_nav"
-        android:text="@string/saudacao_pg3"
-        android:layout_marginTop="-4dp"
         android:gravity="center"
+        android:text="@string/meusDados"
         android:textColor="@color/white"
         android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="@+id/header_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <EditText
+        android:id="@+id/meusDados_Nome"
+        style="@style/Container_nome2"
+        android:layout_marginTop="20dp"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_title" />
+    <EditText
+        android:id="@+id/meusDados_Email"
+        style="@style/Container_nome2"
+        android:layout_marginTop="20dp"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/meusDados_Nome"
+         />
+    <EditText
+        android:id="@+id/meusDados_CPF"
+        style="@style/Container_nome2"
+        android:layout_marginTop="20dp"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/meusDados_Email" />
+    <EditText
+        android:id="@+id/meusDados_Senha"
+        style="@style/Container_nome2"
+        android:layout_marginTop="20dp"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/meusDados_CPF" />
+    <EditText
+        android:id="@+id/meusDados_ConfirmarSenha"
+        style="@style/Container_nome2"
+        android:layout_marginTop="20dp"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/meusDados_Senha" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonSalvar"
+        style="@style/Button_menor"
+        android:layout_marginTop="20dp"
+        android:text="@string/salvar"
+        android:textColor="@color/gray"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/meusDados_ConfirmarSenha"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonVoltar"
+        style="@style/Button_menor"
+        android:layout_marginTop="20dp"
+        android:text="@string/voltar"
+        android:textColor="@color/gray"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSalvar"
+        tools:ignore="MissingConstraints" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

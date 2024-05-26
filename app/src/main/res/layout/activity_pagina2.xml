@@ -13,22 +13,23 @@
         android:id="@+id/header_title"
         style="@style/Container_header_nav"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="180dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
+
 
     <ImageView
         android:id="@+id/logo"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginTop="30dp"
         android:contentDescription="logotipo_currency"
         android:src="@drawable/bitcoin"
+        app:layout_constraintBottom_toTopOf="@+id/toolbar_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/header_title"
         app:layout_constraintTop_toTopOf="@+id/header_title"
         tools:ignore="HardcodedText,MissingConstraints,ImageContrastCheck" />
-
 
     <TextView
         android:id="@+id/toolbar_title"
@@ -37,11 +38,10 @@
         android:text="@string/saudacao_pg2"
         android:textColor="@color/white"
         android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="@+id/header_title"
         app:layout_constraintEnd_toEndOf="@+id/header_title"
         app:layout_constraintStart_toStartOf="@+id/header_title"
-        app:layout_constraintTop_toBottomOf="@+id/logo"
         tools:ignore="MissingConstraints,TextSizeCheck,TextContrastCheck" />
-
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_dolar"
@@ -92,7 +92,7 @@
         tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_euro"
+        android:id="@+id/button_Euro"
         style="@style/Button_moedas"
         android:layout_marginTop="10dp"
         android:text="@string/button2_euro"
@@ -112,7 +112,7 @@
         android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_euro"
+        app:layout_constraintTop_toBottomOf="@+id/button_Euro"
         tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatButton

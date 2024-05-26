@@ -46,4 +46,19 @@ public class BancoController {
         db.close();
         return cursor;
     }
+//consulta meus dados
+    public Cursor consultaUsuario(String email) {
+        Cursor cursor;
+        String[] campos = { "idUser", "nome", "cpf","email","senha" };
+        String where = "email ='" + email +"'";
+        db = banco.getReadableDatabase();
+        cursor = db.query("usuarios", campos, where, null, null, null,
+                null, null);
+        if (cursor != null) {
+            cursor.moveToFirst();
+        }
+
+        db.close();
+        return cursor;
+    }
 }

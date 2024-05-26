@@ -13,7 +13,7 @@
         style="@style/ContainerTitulo_pg1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="25dp"
         android:gravity="center"
         android:text="@string/titulo_pg1"
         android:textColor="@color/black"
@@ -27,7 +27,7 @@
     <View
         android:id="@+id/container_moedas"
         style="@style/container_moedas"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="100dp"
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -97,9 +97,8 @@
         android:id="@+id/header_title"
         style="@style/Container_header_nav"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp" />
+        android:layout_height="180dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/logo"
@@ -107,9 +106,11 @@
         android:layout_height="80dp"
         android:importantForAccessibility="no"
         android:src="@drawable/bitcoin"
-        tools:ignore="MissingConstraints,ImageContrastCheck"
-        tools:layout_editor_absoluteX="166dp"
-        tools:layout_editor_absoluteY="28dp" />
+        app:layout_constraintBottom_toTopOf="@+id/toolbar_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/header_title"
+        tools:ignore="MissingConstraints,ImageContrastCheck" />
 
     <TextView
         android:id="@+id/toolbar_title"
@@ -118,14 +119,15 @@
         android:text="@string/saudacao_pg1"
         android:textColor="@color/white"
         android:textSize="36sp"
-        tools:ignore="MissingConstraints,TextSizeCheck,TextContrastCheck"
-        tools:layout_editor_absoluteX="56dp"
-        tools:layout_editor_absoluteY="104dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/header_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints,TextSizeCheck,TextContrastCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/cotacao"
         style="@style/Button_menor"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:text="@string/cotacao"
         android:textColor="@color/gray"
         android:textSize="24sp"
@@ -135,15 +137,27 @@
         tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_sair"
+        android:id="@+id/meusDados"
         style="@style/Button_menor"
-        android:text="@string/sair"
+        android:layout_marginTop="20dp"
+        android:text="@string/meusDados"
         android:textColor="@color/gray"
-        android:layout_marginTop="50dp"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cotacao"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_sair"
+        style="@style/Button_menor"
+        android:text="@string/sair"
+        android:textColor="@color/gray"
+        android:layout_marginTop="20dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/meusDados"
         tools:ignore="MissingConstraints" />
 
 
