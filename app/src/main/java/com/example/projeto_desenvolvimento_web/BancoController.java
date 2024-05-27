@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.provider.ContactsContract;
 
 
 public class BancoController {
@@ -32,10 +33,10 @@ public class BancoController {
         else
             return "Dados Cadastrados com sucesso!";
     }
-    public Cursor carregaDadosPeloCpfSenha(String Cpf, String senha) {
+    public Cursor carregaDadosPeloCpfSenha(String email, String senha) {
         Cursor cursor;
         String[] campos = { "idUser", "nome", "cpf","email","senha" };
-        String where = "cpf ='" + Cpf +"'and senha = '"+ senha +"'";
+        String where = "email ='" + email +"'and senha = '"+ senha +"'";
         db = banco.getReadableDatabase();
         cursor = db.query("usuarios", campos, where, null, null, null,
                 null, null);

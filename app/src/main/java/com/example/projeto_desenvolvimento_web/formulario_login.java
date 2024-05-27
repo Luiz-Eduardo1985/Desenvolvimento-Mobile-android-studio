@@ -12,16 +12,16 @@ import android.widget.Toast;
 
 public class formulario_login extends AppCompatActivity implements View.OnClickListener {
 
-    EditText containerLogCpf, containerLogSenha;
+    EditText containerLogEmail, containerLogSenha;
     Button buttonLog, button_cadastrar_seLog;
-
+    String _email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formulario_login);
 
-        containerLogCpf =  findViewById(R.id.containerLogCpf);
+        containerLogEmail =  findViewById(R.id.containerLogEmail);
         containerLogSenha =  findViewById(R.id.containerLogSenha);
         buttonLog =  findViewById(R.id.buttonLog);
         button_cadastrar_seLog =   findViewById(R.id.button_cadastrar_seLog);
@@ -33,21 +33,26 @@ public class formulario_login extends AppCompatActivity implements View.OnClickL
     @Override
     public void onClick(View view) {
         if (view.getId()== R.id.buttonLog){
-
             if(validaDados()){
-             Intent tela = new Intent(this, pagina1.class);
-             startActivity(tela);
-        }}
+                Intent tela = new Intent(this, pagina1.class);
+                Bundle parametros = new Bundle();
+                parametros.putString("email",containerLogEmail.getText().toString());
+                tela.putExtras(parametros);
+                startActivity(tela);
+
+            }}
+        
         if (view.getId()== R.id.button_cadastrar_seLog){
 
             Intent telaCadastro = new Intent(this, FormCadastro.class);
+
             startActivity(telaCadastro);
         }
     }
     public boolean validaDados(){
         boolean retorno  = true;
-        if( containerLogCpf.getText().length()==0){
-            Toast.makeText(getApplicationContext(), "O campo CPF deve ser preenchido", Toast.LENGTH_LONG).show();
+        if(containerLogEmail.getText().length()==0){
+            Toast.makeText(getApplicationContext(), "O campo Email deve ser preenchido", Toast.LENGTH_LONG).show();
             retorno = false;
         } else {
             if (containerLogSenha.getText().length()==0){
@@ -56,13 +61,13 @@ public class formulario_login extends AppCompatActivity implements View.OnClickL
             }else {
                BancoController bd = new BancoController(getBaseContext());
 
-                try (Cursor dados = bd.carregaDadosPeloCpfSenha(containerLogCpf.getText().toString(), containerLogSenha.getText().toString())) {
+                try (Cursor dados = bd.carregaDadosPeloCpfSenha(containerLogEmail.getText().toString(), containerLogSenha.getText().toString())) {
 
                     if (dados.moveToFirst()) {
-                        String msg = "cpf / senha encontrado";
+                        String msg = "Email / senha encontrado";
                         Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
                     } else {
-                        String msg = "cpf /senha  não encontrados";
+                        String msg = "Email /senha  não encontrados";
                         Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
                         retorno = false;
                     }

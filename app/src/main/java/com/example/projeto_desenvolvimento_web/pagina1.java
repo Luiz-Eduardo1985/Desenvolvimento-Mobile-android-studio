@@ -40,11 +40,9 @@ public class pagina1  extends AppCompatActivity implements View.OnClickListener 
         }
         if (v.getId()== R.id. meusDados){
             Intent tela = new Intent(this, pagina3.class);
-
             Bundle parametros = new Bundle();
             parametros.putString("email", _email);
             tela.putExtras(parametros);
-
             startActivity(tela);
         }
 
